@@ -20,9 +20,7 @@ This build is just for **fun** because I am tired of finding my remote everytime
 
 ## 📸 Screenshots
 
-<p float="left">
   ![Screenshot_2025-07-20-00-02-37-186_com lomi ledremote](https://github.com/user-attachments/assets/0095b18c-376d-4d96-94ee-7d2e190ed343)
-</p>
 
 ---
 
