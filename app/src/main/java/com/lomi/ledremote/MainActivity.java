@@ -117,8 +117,44 @@ public class MainActivity extends AppCompatActivity {
             sendIR("0x00FF9867");
         });
 
+        blue1.setOnClickListener(view -> {
+            sendIR("0x00FFA25D");
+        });
+
+        blue2.setOnClickListener(view -> {
+            sendIR("0x00FF926D");
+        });
+
+        blue3.setOnClickListener(view -> {
+            sendIR("0x00FFB24D");
+        });
+
+        blue4.setOnClickListener(view -> {
+            sendIR("0x00FF7887");
+        });
+
+        blue5.setOnClickListener(view -> {
+            sendIR("0x00FF58A7");
+        });
+
         white1.setOnClickListener(view -> {
             sendIR("0x00FF22DD");
+        });
+
+        white2.setOnClickListener(view -> {
+            sendIR("0x00FF12ED");
+        });
+
+        white3.setOnClickListener(view -> {
+            sendIR("0x00FF32CD");
+        });
+
+        white4.setOnClickListener(view -> {
+            sendIR("0x00FFF807");
+        });
+
+        white5.setOnClickListener(view -> {
+            sendIR("0x00FFD827");
         });
     }
 
