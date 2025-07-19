@@ -16,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ConsumerIrManager irManager;
     private MaterialButton brightnessUp, brightnessDown, play, powerOn, red1, green1, blue1, white1,
-     red2, green2, blue2, white2, red3, green3, blue3, white3, red4, green4, blue4, white4, red5, green5, blue5, white5;
+     red2, green2, blue2, white2, red3, green3, blue3, white3, red4, green4, blue4, white4, red5, green5, blue5, white5,
+    redArrowUp, redArrowDown, greenArrowUp, greenArrowDown, blueArroowUp, blueArrowDown, diy1, diy2, diy3, diy4, diy5, diy6,
+    quick, slow, auto, flash, fade7, jump3, jump7, fade3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,26 @@ public class MainActivity extends AppCompatActivity {
         white3 = findViewById(R.id.White3);
         white4 = findViewById(R.id.White4);
         white5 = findViewById(R.id.White5);
+        redArrowUp = findViewById(R.id.redArrowUp);
+        redArrowDown = findViewById(R.id.redArrowDown);
+        greenArrowUp = findViewById(R.id.greenArrowUp);
+        greenArrowDown = findViewById(R.id.greenArrowDown);
+        blueArroowUp = findViewById(R.id.blueArrowUp);
+        blueArrowDown = findViewById(R.id.blueArrowDown);
+        diy1 = findViewById(R.id.diy1);
+        diy2 = findViewById(R.id.diy2);
+        diy3 = findViewById(R.id.diy3);
+        diy4 = findViewById(R.id.diy4);
+        diy5 = findViewById(R.id.diy5);
+        diy6 = findViewById(R.id.diy6);
+        quick = findViewById(R.id.quick);
+        slow = findViewById(R.id.slow);
+        auto = findViewById(R.id.auto);
+        flash = findViewById(R.id.flash);
+        fade7 = findViewById(R.id.fade7);
+        jump3 = findViewById(R.id.jump3);
+        jump7 = findViewById(R.id.jump7);
+        fade3 = findViewById(R.id.fade3);
 
         brightnessUp.setOnClickListener(view -> {
            sendIR("0x00FF3AC5");
@@ -155,6 +177,86 @@ public class MainActivity extends AppCompatActivity {
 
         white5.setOnClickListener(view -> {
             sendIR("0x00FFD827");
+        });
+
+        redArrowUp.setOnClickListener(view -> {
+            sendIR("0x00FF28D7");
+        });
+
+        redArrowDown.setOnClickListener(view -> {
+            sendIR("0x00FF08F7");
+        });
+
+        greenArrowUp.setOnClickListener(view -> {
+            sendIR("0x00FFA857");
+        });
+
+        greenArrowDown.setOnClickListener(view -> {
+            sendIR("0x00FF8877");
+        });
+
+        blueArroowUp.setOnClickListener(view -> {
+            sendIR("0x00FF6897");
+        });
+
+        blueArrowDown.setOnClickListener(view -> {
+            sendIR("0x00FF48B7");
+        });
+
+        quick.setOnClickListener(view -> {
+            sendIR("0x00FFE817");
+        });
+
+        slow.setOnClickListener(view -> {
+            sendIR("0x00FFC837");
+        });
+
+        auto.setOnClickListener(view -> {
+            sendIR("0x00FFF00F");
+        });
+
+        flash.setOnClickListener(view -> {
+            sendIR("0x00FFD02F");
+        });
+
+        fade7.setOnClickListener(view -> {
+            sendIR("0x00FFE01F");
+        });
+
+        diy1.setOnClickListener(view -> {
+            sendIR("0x00FF30CF");
+        });
+
+        diy2.setOnClickListener(view -> {
+            sendIR("0x00FFB04F");
+        });
+
+        diy3.setOnClickListener(view -> {
+            sendIR("0x00FF708F");
+        });
+
+        diy4.setOnClickListener(view -> {
+            sendIR("0x00FF10EF");
+        });
+
+        diy5.setOnClickListener(view -> {
+            sendIR("0x00FF906F");
+        });
+
+        diy6.setOnClickListener(view -> {
+            sendIR("0x00FF50AF");
+        });
+
+        jump3.setOnClickListener(view -> {
+            sendIR("0x00FF20DF");
+        });
+
+        jump7.setOnClickListener(view -> {
+            sendIR("0x00FFA05F");
+        });
+
+        fade3.setOnClickListener(view -> {
+            sendIR("0x00FF609F");
         });
     }
 
