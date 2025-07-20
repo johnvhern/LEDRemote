@@ -188,8 +188,6 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
                 android:padding="0dp">
 
                 <com.google.android.material.button.MaterialButton
@@ -280,9 +278,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_marginTop="10dp">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Red2"
@@ -361,9 +357,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_marginTop="10dp">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Red3"
@@ -443,9 +437,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_marginTop="10dp">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Red4"
@@ -524,9 +516,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_marginTop="10dp">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Red5"
