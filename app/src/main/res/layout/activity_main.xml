@@ -58,7 +58,7 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_end="15dp" />
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -70,11 +70,15 @@
             app:layout_constraintTop_toTopOf="@+id/guide3">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 app:cardBackgroundColor="#E9E9FF"
                 app:cardCornerRadius="50dp"
-                app:contentPadding="5dp">
+                app:contentPadding="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -120,10 +124,12 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
                 app:cardBackgroundColor="#E9E9FF"
+                android:layout_marginEnd="5dp"
                 app:cardCornerRadius="50dp"
-                app:contentPadding="5dp">
+                app:contentPadding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -163,7 +169,7 @@
 
             </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         <LinearLayout
@@ -179,7 +185,7 @@
             app:layout_constraintStart_toStartOf="@+id/guide1"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -188,7 +194,6 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Red1"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:backgroundTint="#F44336"
@@ -201,14 +206,17 @@
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Green1"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="#4CAF50"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -219,14 +227,17 @@
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Red1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Blue1"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="#3F51B5"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -237,14 +248,16 @@
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Green1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/White1"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
                     android:backgroundTint="#fff"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -255,10 +268,16 @@
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.87"
+                    app:layout_constraintStart_toEndOf="@+id/Blue1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -267,7 +286,6 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Red2"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:backgroundTint="#ec6064"
@@ -277,14 +295,17 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Green2"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="#5fd273"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -292,14 +313,17 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Red2"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Blue2"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="#569de5"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -307,14 +331,17 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Green2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/White2"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
                     android:backgroundTint="#d6a2b9"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -322,11 +349,16 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.875"
+                    app:layout_constraintStart_toEndOf="@+id/Blue2"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -335,7 +367,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Red3"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:backgroundTint="#ec8872"
@@ -345,14 +377,17 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Green3"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="#1ed1c0"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -360,14 +395,17 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Red3"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Blue3"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="#4773e3"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -375,14 +413,16 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Green3"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/White3"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
                     android:backgroundTint="#d6a0b8"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -390,11 +430,17 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.875"
+                    app:layout_constraintStart_toEndOf="@+id/Blue3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -403,7 +449,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Red4"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:backgroundTint="#f9a21e"
@@ -413,14 +459,17 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Green4"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="#3788b4"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -428,14 +477,17 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Red4"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Blue4"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="#b02a8a"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -443,14 +495,16 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Green4"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/White4"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
                     android:backgroundTint="#1ed2c2"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -458,11 +512,16 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.875"
+                    app:layout_constraintStart_toEndOf="@+id/Blue4"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -471,7 +530,6 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Red5"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:backgroundTint="#f2c847"
@@ -479,16 +537,17 @@
                     android:insetTop="0dp"
                     android:insetRight="0dp"
                     android:insetBottom="0dp"
-                    android:padding="5dp"
-                    app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Green5"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="#53c0d9"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -496,14 +555,17 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Red5"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Blue5"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="#d2b0e9"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -511,14 +573,18 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/Green5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/White5"
-                    style="@style/Widget.MaterialComponents.Button.Icon"
+
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
                     android:backgroundTint="#1dd1c2"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -526,9 +592,15 @@
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.875"
+                    app:layout_constraintStart_toEndOf="@+id/Blue5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
@@ -537,25 +609,22 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/guide4"
             app:layout_constraintEnd_toStartOf="@+id/guide2"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/guide1"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-            app:layout_constraintVertical_bias="1.2">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
             <LinearLayout
                 android:id="@+id/linearLayout3"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:background="@drawable/background_card"
                 android:orientation="vertical"
                 android:padding="5dp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
@@ -564,7 +633,6 @@
                         style="@style/Widget.MaterialComponents.Button.Icon"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
                         android:backgroundTint="#fff"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -574,6 +642,9 @@
                         app:iconPadding="0dp"
                         app:iconSize="24dp"
                         app:iconTint="@null"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                     <com.google.android.material.button.MaterialButton
@@ -581,7 +652,7 @@
                         style="@style/Widget.MaterialComponents.Button.Icon"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
+                        android:layout_marginStart="9dp"
                         android:backgroundTint="#fff"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -591,6 +662,9 @@
                         app:iconPadding="0dp"
                         app:iconSize="24dp"
                         app:iconTint="@null"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/redArrowUp"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                     <com.google.android.material.button.MaterialButton
@@ -598,7 +672,7 @@
                         style="@style/Widget.MaterialComponents.Button.Icon"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
+                        android:layout_marginStart="9dp"
                         android:backgroundTint="#fff"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -608,12 +682,18 @@
                         app:iconPadding="0dp"
                         app:iconSize="24dp"
                         app:iconTint="@null"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/greenArrowUp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -623,7 +703,6 @@
                         style="@style/Widget.MaterialComponents.Button.Icon"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
                         android:backgroundTint="#fff"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -633,6 +712,9 @@
                         app:iconPadding="0dp"
                         app:iconSize="24dp"
                         app:iconTint="@null"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                     <com.google.android.material.button.MaterialButton
@@ -640,7 +722,7 @@
                         style="@style/Widget.MaterialComponents.Button.Icon"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
+                        android:layout_marginStart="9dp"
                         android:backgroundTint="#fff"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -650,6 +732,9 @@
                         app:iconPadding="0dp"
                         app:iconSize="24dp"
                         app:iconTint="@null"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/redArrowDown"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                     <com.google.android.material.button.MaterialButton
@@ -657,7 +742,6 @@
                         style="@style/Widget.MaterialComponents.Button.Icon"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
                         android:backgroundTint="#fff"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -667,12 +751,17 @@
                         app:iconPadding="0dp"
                         app:iconSize="24dp"
                         app:iconTint="@null"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/greenArrowDown"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -681,7 +770,6 @@
                         android:id="@+id/diy1"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
                         android:backgroundTint="@color/white"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -692,13 +780,16 @@
                         android:textColor="@color/black"
                         android:textSize="13sp"
                         app:iconPadding="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/diy2"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
+                        android:layout_marginStart="9dp"
                         android:backgroundTint="@color/white"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -709,13 +800,15 @@
                         android:textColor="@color/black"
                         android:textSize="13sp"
                         app:iconPadding="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/diy1"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/diy3"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
                         android:backgroundTint="@color/white"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -726,12 +819,17 @@
                         android:textColor="@color/black"
                         android:textSize="13sp"
                         app:iconPadding="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/diy2"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -740,7 +838,6 @@
                         android:id="@+id/diy4"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
                         android:backgroundTint="@color/white"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -751,13 +848,16 @@
                         android:textColor="@color/black"
                         android:textSize="13sp"
                         app:iconPadding="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/diy5"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
+                        android:layout_marginStart="9dp"
                         android:backgroundTint="@color/white"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -768,13 +868,15 @@
                         android:textColor="@color/black"
                         android:textSize="13sp"
                         app:iconPadding="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/diy4"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/diy6"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="5dp"
                         android:backgroundTint="@color/white"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -785,9 +887,14 @@
                         android:textColor="@color/black"
                         android:textSize="13sp"
                         app:iconPadding="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/diy5"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
 
@@ -901,14 +1008,14 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
                 android:background="@drawable/background_card"
+                android:orientation="horizontal"
+                android:padding="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
@@ -916,7 +1023,6 @@
                     android:id="@+id/jump3"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
                     android:backgroundTint="@color/white"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -927,13 +1033,16 @@
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/jump7"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="@color/white"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
@@ -944,27 +1053,36 @@
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/jump3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/fade3"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
+                    android:layout_marginStart="9dp"
                     android:backgroundTint="@color/white"
                     android:insetLeft="0dp"
                     android:insetTop="0dp"
                     android:insetRight="0dp"
-                    android:layout_marginStart="5dp"
                     android:insetBottom="0dp"
                     android:padding="5dp"
                     android:text="Fade3"
                     android:textColor="@color/black"
                     android:textSize="13sp"
                     app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/jump7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintVertical_bias="0.0"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
 
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
